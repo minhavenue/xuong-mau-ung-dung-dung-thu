@@ -106,7 +106,7 @@ function Index() {
   const [notice, setNotice] = useState("");
 
   function handleUrl() {
-    setNotice(url.trim() ? "Đã nhận liên kết — sẵn sàng tạo dự án." : "Hãy dán liên kết video trước.");
+    setNotice(url.trim() ? "Đây là bản mẫu: nối phần xử lý của bạn vào đây." : "Hãy dán liên kết video trước.");
   }
 
   function toggleSample(index: number) {
@@ -252,7 +252,7 @@ function Index() {
                   ) : (
                     <div className="flex h-full flex-col items-center justify-center gap-2 px-3 text-center">
                       <span className="grid size-8 place-items-center rounded-full bg-brand text-brand-foreground"><Play className="ml-0.5 size-4" fill="currentColor" /></span>
-                      <span className="text-[9px] font-semibold">cải phân tích xương — bản đề xuất 8 cảnh</span>
+                      <span className="text-[9px] font-semibold">Ví dụ: bản đề xuất 8 cảnh từ video dài</span>
                     </div>
                   )}
                   {project.image && <span className="absolute bottom-2 left-2 rounded bg-background/80 px-1.5 py-1 text-[8px] font-bold">Còn 15 ngày</span>}
@@ -289,7 +289,7 @@ function Header({ onNotice }: { onNotice: (message: string) => void }) {
           <div className="font-display text-2xl font-extrabold italic gold-text sm:text-3xl">[Tên công cụ]</div>
           <span className="hidden text-xs font-semibold text-muted-foreground sm:inline">Video dài → Nhiều Short</span>
         </div>
-        <div className="hidden text-[10px] font-semibold text-muted-foreground lg:block">Thời Gian · Thu Nhập · Tự Do</div>
+        <div className="hidden text-[10px] font-semibold text-muted-foreground lg:block">[Khẩu hiệu ngắn của công cụ]</div>
         <nav className="flex items-center gap-1.5">
           <Button variant="nav" size="sm" onClick={() => onNotice("Bảng giá sẽ được cập nhật.")}><CircleDollarSign className="size-3.5" /><span className="hidden sm:inline">Giá cả</span></Button>
           <Button variant="nav" size="sm" onClick={() => onNotice("Đã mở thư viện dự án.")}><FolderOpen className="size-3.5" /><span className="hidden md:inline">Dự án</span></Button>
